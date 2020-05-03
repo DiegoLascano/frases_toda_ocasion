@@ -1,4 +1,4 @@
-package com.example.frases_toda_ocasion
+package com.nextechdevelopment.frases_toda_ocasion
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
