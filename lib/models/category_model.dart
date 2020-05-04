@@ -10,21 +10,21 @@ CategoryModel categoryModelFromJson(String str) =>
 String categoryModelToJson(CategoryModel data) => json.encode(data.toJson());
 
 class CategoryModel {
-  String imgUrl;
+  String imageUrl;
   String name;
 
   CategoryModel({
-    this.imgUrl,
+    this.imageUrl,
     this.name,
   });
 
   factory CategoryModel.fromJson(Map<String, dynamic> json) => CategoryModel(
-        imgUrl: json["imgUrl"],
+        imageUrl: json["imageUrl"],
         name: json["name"],
       );
 
   Map<String, dynamic> toJson() => {
-        "imgUrl": imgUrl,
+        "imageUrl": imageUrl,
         "name": name,
       };
 }

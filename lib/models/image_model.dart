@@ -10,29 +10,25 @@ ImageModel imageModelFromJson(String str) =>
 String imageModelToJson(ImageModel data) => json.encode(data.toJson());
 
 class ImageModel {
-  String imageUrl;
-  int votes;
+  String id;
   int downloads;
-  int timestamp;
+  String imageUrl;
 
   ImageModel({
-    this.imageUrl,
-    this.votes,
+    this.id,
     this.downloads,
-    this.timestamp,
+    this.imageUrl,
   });
 
   factory ImageModel.fromJson(Map<String, dynamic> json) => ImageModel(
-        imageUrl: json["imageUrl"],
-        votes: json["votes"],
+        id: json["id"],
         downloads: json["downloads"],
-        timestamp: json["timestamp"],
+        imageUrl: json["imageUrl"],
       );
 
   Map<String, dynamic> toJson() => {
-        "imageUrl": imageUrl,
-        "votes": votes,
+        // "id": id,
         "downloads": downloads,
-        "timestamp": timestamp,
+        "imageUrl": imageUrl,
       };
 }
