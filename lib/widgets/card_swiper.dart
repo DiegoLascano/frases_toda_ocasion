@@ -15,42 +15,34 @@ class CardSwiper extends StatelessWidget {
     final ImagesBloc imagesBloc = Provider.of(context);
 
     return Swiper(
-      layout: SwiperLayout.STACK,
-      itemWidth: _screenSize.width * 0.85,
-      itemHeight: double.infinity,
+      layout: SwiperLayout.DEFAULT,
+      // itemWidth: _screenSize.width * 0.85,
+      // itemHeight: double.infinity,
       itemCount: images.length,
       index: 0,
       onIndexChanged: (index) {
         imagesBloc.changeImageIndex(index);
+        final downloads = imagesBloc.imagesList[index].downloads;
+        imagesBloc.changedownloads(downloads);
       },
       control: new SwiperControl(
-        padding: EdgeInsets.all(35.0),
+        padding: EdgeInsets.all(10.0),
         color: Color.fromRGBO(255, 255, 255, 0.9),
       ),
       itemBuilder: (BuildContext context, int index) {
         // movies[index].uniqueId = '${movies[index].id}-mainCard';
         return ClipRRect(
-          borderRadius: BorderRadius.circular(20.0),
+          borderRadius: BorderRadius.circular(10.0),
           child: GestureDetector(
             child: FadeInImage(
               placeholder: AssetImage('assets/images/no-image.png'),
               image: NetworkImage(images[index].imageUrl),
               fit: BoxFit.fill,
             ),
-            onTap: () {
-              // Navigator.pushNamed(context, 'details',
-              //     arguments: movies[index]);
-            },
+            onTap: null,
           ),
         );
       },
-      // pagination: new SwiperPagination(),
-      // control: new SwiperControl(),
     );
   }
-
-  // void _itemChanged(int index) {
-  //   imagesBloc.changeImageIndex(index);
-  //   // print(index);
-  // }
 }
