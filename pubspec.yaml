@@ -26,6 +26,10 @@ dependencies:
 
   flutter_swiper: ^1.1.6
   http: ^0.12.0+4
+  rxdart: ^0.23.1
+  image_picker_saver: ^0.3.0
+  flutter_native_admob: ^2.1.0
+  firebase_admob: ^0.9.3+2
 
 dev_dependencies:
   flutter_test:
@@ -44,9 +48,15 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #  - images/a_dot_burr.jpeg
-  #  - images/a_dot_ham.jpeg
+  assets:
+   - assets/images/bg_amistad.jpg
+   - assets/images/bg_amor.jpg
+   - assets/images/bg_emprendimiento.jpg
+   - assets/images/bg_familia.jpg
+   - assets/images/bg_jesus.jpeg
+   - assets/images/bg_motivacion.png
+   - assets/images/jar-loading.gif
+   - assets/images/no-image.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
